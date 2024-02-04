@@ -1,7 +1,7 @@
 let form = document.getElementById("form");
 let inputName = document.getElementById("name");
 let inputPass = document.getElementById("password");
-console.log(form, inputName, inputPass);
+console.log(form,inputName ,inputPass);
 let searchForm = document.querySelector(".search_form");
 let search = document.querySelector(".search");
 let moreinfo = document.querySelectorAll(".info_btn");
@@ -12,26 +12,29 @@ let list = document.querySelector(".content_list");
 let infoList = document.querySelector(".info_list");
 let content = document.querySelector(".content");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let nametest = inputName.value;
-  let passtest = inputPass.value;
-  let regex = /^[a-zA-Z]{4,16}$/;
-  let resname = regex.test(nametest);
-  let respass = regex.test(passtest);
-  if (resname && respass) {
-    localStorage.setItem(
-      "name",
-      JSON.stringify([
-        {
-          userName: nametest,
-          password: passtest,
-        },
-      ])
-    );
-    document.location = "index.html";
-  }
-  fetch("https://openlibrary.org/people/mekBot/books/currently-reading.json")
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let nametest = inputName.value;
+//   let passtest = inputPass.value;
+//   let regex = /^[a-zA-Z]{4,16}$/;
+//   let resname = regex.test(nametest);
+//   let respass = regex.test(passtest);
+//   if (resname && respass) {
+//     localStorage.setItem(
+//       "name",
+//       JSON.stringify([
+//         {
+//           userName: nametest,
+//           password: passtest,
+//         },
+//       ])
+//     );
+//     document.location = "index.html";
+//   }
+// });
+
+fetch("https://openlibrary.org/people/mekBot/books/currently-reading.json")
   .then((res) => {
     return res.json();
   })
@@ -185,6 +188,3 @@ document.addEventListener("click", (e) => {
     overla.setAttribute("class", "overla");
   }
 });
-});
-
-
