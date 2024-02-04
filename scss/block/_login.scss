@@ -1,0 +1,107 @@
+body {
+  background-image: url(../../img/knigi_biblioteka_lestnitsa_964478_1280x720.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overley {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(4px);
+}
+
+.login_title {
+  color: rgb(255, 255, 255);
+  font-family: Dancing Script;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0%;
+  margin-bottom: 50px;
+}
+
+.login_box {
+  position: fixed;
+  max-width: 300px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+.input_box {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.box_1 {
+  position: relative;
+}
+.box_1::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(../../img/user.png);
+  position: absolute;
+  bottom: 13px;
+  left: 15px;
+}
+
+.box_2 {
+  position: relative;
+}
+.box_2::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(../../img/lock.svg);
+  position: absolute;
+  bottom: 13px;
+  left: 15px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 12px 165px 12px 51px;
+  outline-width: 0;
+  outline-color: #fff;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.login_btn {
+  color: rgb(13, 117, 255);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  padding: 13px 123px;
+  margin-top: 20px;
+}
