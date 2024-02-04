@@ -33,7 +33,7 @@ console.log(content);
 //   }
 // });
 
-fetch("https://openlibrary.org/people/mekBot/books/already-read.json")
+fetch("https://openlibrary.org/people/mekBot/books/currently-reading.json")
   .then((res) => {
     return res.json();
   })
